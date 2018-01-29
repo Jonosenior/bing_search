@@ -8,4 +8,7 @@ search = gets.chomp
 
 response = RestClient.get("https://www.bing.com/search?q=#{search}")
 
-puts response.headers
+puts "\n\nHeaders: #{response.headers}\n\n"
+puts "Cookies: #{response.cookies}\n\n"
+puts "Response code: #{response.code}\n\n"
+puts "Body: #{response.body}"
